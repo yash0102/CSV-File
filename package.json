@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "name": "csv-file",
+  "version": "1.0.0",
+  "description": "Simple CSV file uploader and view data app",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yashwant Kumar Sonkar",
+  "license": "ISC"
+}

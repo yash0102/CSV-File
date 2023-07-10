@@ -6,6 +6,12 @@ const expressLayout     = require('express-ejs-layouts');
 // defining port number
 const port              = process.env.port || 8000;
 
+// added a parser
+app.use(express.urlencoded());
+
+// for getting static files
+app.use(express.static('assets'));
+
 
 // setting up view engine
 app.set('view engine', 'ejs');

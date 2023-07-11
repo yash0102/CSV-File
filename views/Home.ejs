@@ -34,20 +34,19 @@
                     </tr>
                 </thead>
                 <tbody>
+
+                    <% let sl = 0 %>
+                    
+                    <% for (let file of Files) {%>
                     <tr>
-                        <td>1.text</td>
-                        <td>11-07-2023</td>
-                        <td>01:12:00 PM</td>
+                        
+                        <td> <%= ++sl %>. <%= file.FileName %> </td>
+                        <td> <%= file.createdAt.toLocaleDateString() %></td>
+                        <td> <%= file.createdAt.toLocaleTimeString() %> </td>
                         <td><i class="fa-solid fa-up-right-from-square"></i></td>
                         <td><i class="fa-solid fa-trash-can"></i></td>
                     </tr>
-                    <tr>
-                        <td>1.text</td>
-                        <td>11-07-2023</td>
-                        <td>01:12:00 PM</td>
-                        <td><i class="fa-solid fa-up-right-from-square"></i></td>
-                        <td><i class="fa-solid fa-trash-can"></i></td>
-                    </tr>
+                    <% } %>
                 </tbody>
             </table>
         <% } %>

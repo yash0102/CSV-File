@@ -20,8 +20,9 @@
                 <h1>Uploaded File</h1>
             </div>
 
-            <!-- <h2>No files to show!</h2> -->
-
+            <% if ( Files.length === 0  ) {%>
+                <h2>No files to show!</h2>
+            <% } else { %>
             <table>
                 <thead>
                     <tr class="tableHead">
@@ -49,6 +50,7 @@
                     </tr>
                 </tbody>
             </table>
+        <% } %>
         </div>
     </center> 
 

@@ -8,7 +8,7 @@ const db                = require('./config/mongoose');
 const port              = process.env.port || 8000;
 
 // added a parser
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended: true}));
 
 // for getting static files
 app.use(express.static('assets'));

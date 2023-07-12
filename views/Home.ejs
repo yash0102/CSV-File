@@ -21,7 +21,7 @@
             </div>
 
             <% if ( Files.length === 0  ) {%>
-                <h2>No files to show!</h2>
+                <h2>Please Upload a File!</h2>
             <% } else { %>
             <table>
                 <thead>
@@ -44,7 +44,7 @@
                         <td> <%= file.createdAt.toLocaleDateString() %></td>
                         <td> <%= file.createdAt.toLocaleTimeString() %> </td>
                         <td><i class="fa-solid fa-up-right-from-square"></i></td>
-                        <td><i class="fa-solid fa-trash-can"></i></td>
+                        <td> <a href="/delete/<%= file._id %>"> <i class="fa-solid fa-trash-can"></i> </a></td>
                     </tr>
                     <% } %>
                 </tbody>

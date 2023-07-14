@@ -2,7 +2,17 @@ const mongoose = require('mongoose');
 
 
 // connnect to databases
-mongoose.connect('mongodb://127.0.0.1/CSVMaster');
+// mongoose.connect('mongodb://127.0.0.1/CSVMaster');
+
+const DB = "mongodb+srv://yashsonkar0102:GvSDXUS8XDMFNcli@csvmaster.4p09mjm.mongodb.net/?retryWrites=true&w=majority";
+    // "mongodb+srv://himadrinayak:12345@cluster0.h7n86ah.mongodb.net/csv-upload?retryWrites=true&w=majority";
+
+    mongoose
+    .connect(DB)
+    .then(() => {
+        console.log("Connection successful!");
+    })
+    .catch((err) => console.log("no connection " + err));
 
 // acquire the connection 
 const db = mongoose.connection;
@@ -14,3 +24,5 @@ db.once('error', console.error.bind(console,"Error in connecting to Database"));
 db.once('open', ()=> {
     console.log("Database connected successfully");
 })
+
+module.exports = db;

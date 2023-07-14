@@ -5,7 +5,6 @@ const mongoose = require('mongoose');
 // mongoose.connect('mongodb://127.0.0.1/CSVMaster');
 
 const DB = "mongodb+srv://yashsonkar0102:GvSDXUS8XDMFNcli@csvmaster.4p09mjm.mongodb.net/?retryWrites=true&w=majority";
-    // "mongodb+srv://himadrinayak:12345@cluster0.h7n86ah.mongodb.net/csv-upload?retryWrites=true&w=majority";
 
     mongoose
     .connect(DB)
